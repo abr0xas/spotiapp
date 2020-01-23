@@ -27,9 +27,7 @@ export class SpotifyService {
     });
 
     return this.http.get("https://api.spotify.com/v1/browse/new-releases", { headers })
-    .pipe( map( data => {
-      return data['albums'].items;
-    }))
+    .pipe( map( data =>  data['albums'].items))
 
   }
 
