@@ -14,6 +14,7 @@ export class HomeComponent {
 
 
   constructor(private sportifyService: SpotifyService) {
+    this.sportifyService.getToken();
 
     this.sportifyService.getNewReleases()
       .subscribe((data:any) => {
