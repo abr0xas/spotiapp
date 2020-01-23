@@ -17,7 +17,7 @@ export class SearchComponent {
     .subscribe( (params:any[])=>{
       console.log(params);
 
-      this.busquedaArtistas=params.artists.items;
+      this.busquedaArtistas=params;
       console.log(this.busquedaArtistas);
     })
 
