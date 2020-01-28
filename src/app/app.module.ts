@@ -14,6 +14,10 @@ import { PipesComponent } from './components/pipes/pipes.component';
 //import routes
 import { ROUTES } from './app.routes';
 
+//PIPES
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { CardsComponent } from './components/cards/cards.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +25,9 @@ import { ROUTES } from './app.routes';
     SearchComponent,
     ArtistComponent,
     NavbarComponent,
-    PipesComponent
+    PipesComponent,
+    NoimagePipe,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
