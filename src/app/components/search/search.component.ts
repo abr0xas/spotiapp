@@ -9,8 +9,10 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 export class SearchComponent {
 
   private busquedaArtistas : any[]=[];
-
-  constructor(private sportifyService:SpotifyService ) { }
+  private loading : boolean;
+  constructor(private sportifyService:SpotifyService ) { 
+    this.loading=true;
+  }
 
   buscar(termino: string) {
     this.sportifyService.getArtist(termino,"artist")
@@ -18,6 +20,7 @@ export class SearchComponent {
       console.log(params);
 
       this.busquedaArtistas=params;
+      this.loading=false;
       console.log(this.busquedaArtistas);
     })
 
